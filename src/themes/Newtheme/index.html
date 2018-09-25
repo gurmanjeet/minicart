@@ -56,7 +56,7 @@ var totalFormat = { format: true, showCode: true };
                 <%= config.strings.subtotal %> <%= cart.total(totalFormat) %>
             </div>
             <button class="minicart-submit" type="submit" data-minicart-alt="<%= config.strings.buttonAlt %>"><%- config.strings.button %></button>
-            <button class="minicart-continue" type="submit" data-minicart-alt="<%= config.strings.buttonAlt %>"><%- config.strings.button %></button>
+            <button class="minicart-continue" type="button" onclick="Continue();" data-minicart-alt="<%= config.strings.buttonAlt %>"><%- config.strings.button %></button>
         <% } else { %>
             <p class="minicart-empty-text"><%= config.strings.empty %></p>
         <% } %>
@@ -67,3 +67,9 @@ var totalFormat = { format: true, showCode: true };
         <input type="hidden" name="<%= key %>" value="<%= settings[key] %>" />
     <% } %>
 </form>
+        <script>
+            function Continue()
+            {
+                href.location="shop.html";
+            }
+        </script>
